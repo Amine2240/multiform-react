@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+input {
+  background-color: transparent;
+  border-bottom: 1px rgb(0, 189, 0) solid;
+  border-left: 1px rgb(0, 189, 0) solid ;
+  border-bottom-left-radius: 4px;
+
+}
+
+input:focus {
+  animation: widthbottom .3s linear;
+
+}
+
+.input1:focus+.label1,
+.input2:focus+.label2,
+.input3:focus+.label3 {
+  transform: translateY(-50px);
+  color: rgb(0, 191, 111);
+  opacity: 1;
+}
+
+.label1,
+.label2,
+.label3 {
+  transform: translateY(-30px);
+  color: gray;
+  z-index: -2;
+  transition: all ease .5s;
+  opacity: 0;
+}
+
+
+
+
+
+@keyframes widthbottom {
+  0% {
+    width: 0px;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
